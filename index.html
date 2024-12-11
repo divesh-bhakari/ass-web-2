@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="resetForm()">Logo</div>
+    </nav>
+
+    <div class="form-container">
+        <form action="submit_application.php" method="POST" id="applicationForm">
+            <h2>Application Form</h2>
+            <div class="input-group">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" required placeholder="Enter First Name">
+            </div>
+
+            <div class="input-group">
+                <label for="middle_name">Middle Name</label>
+                <input type="text" name="middle_name" id="middle_name" placeholder="Enter Middle Name">
+            </div>
+
+            <div class="input-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" required placeholder="Enter Last Name">
+            </div>
+
+            <div class="input-group">
+                <label for="father_name">Father's Name</label>
+                <input type="text" name="father_name" id="father_name" required placeholder="Enter Father's Name">
+            </div>
+
+            <div class="input-group">
+                <label for="mobile_no">Mobile No</label>
+                <input type="text" name="mobile_no" id="mobile_no" required placeholder="Enter Mobile No">
+            </div>
+
+            <div class="input-group">
+                <label for="email_id">Email ID</label>
+                <input type="email" name="email_id" id="email_id" required placeholder="Enter Email ID">
+            </div>
+
+            <div class="input-group">
+                <label for="temp_address">Temporary Address</label>
+                <textarea name="temp_address" id="temp_address" required placeholder="Enter Temporary Address"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="perm_address">Permanent Address</label>
+                <textarea name="perm_address" id="perm_address" required placeholder="Enter Permanent Address"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="country">Country</label>
+                <input type="text" name="country" id="country" required placeholder="Enter Country">
+            </div>
+
+            <div class="input-group">
+                <label for="state">State</label>
+                <input type="text" name="state" id="state" required placeholder="Enter State">
+            </div>
+
+            <div class="input-group">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" required placeholder="Enter City">
+            </div>
+
+            <div class="input-group">
+                <label for="pincode">Pincode</label>
+                <input type="text" name="pincode" id="pincode" required placeholder="Enter Pincode">
+            </div>
+
+            <div class="input-group">
+                <label for="occupation">Occupation</label>
+                <input type="text" name="occupation" id="occupation" required placeholder="Enter Occupation">
+            </div>
+
+            <div class="input-group">
+                <label for="education_details">Education Details</label>
+                <textarea name="education_details" id="education_details" required placeholder="Enter Education Details"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="current_status">Current Status</label>
+                <select name="current_status" id="current_status" required>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="professional">Professional</option>
+                    <option value="employee">Employee</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" required placeholder="Describe yourself"></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" id="submit">Submit</button>
+                <button type="reset" id="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h3>Application Submitted Successfully!</h3>
+            <button onclick="window.location.href='index.html'">OK</button>
+        </div>
+    </div>
+
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
